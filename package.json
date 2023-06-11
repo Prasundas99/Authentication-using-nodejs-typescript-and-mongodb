@@ -44,7 +44,7 @@
     "mongoose": "^6.0.12",
     "morgan": "^1.10.0",
     "swagger-ui-express": "^4.6.3",
-    "ts-express-decorators": "^5.65.9"
+    "ts-express-decorators": "^5.67.2"
   },
   "_moduleAliases": {
     "@/resources": "dist/resources",
