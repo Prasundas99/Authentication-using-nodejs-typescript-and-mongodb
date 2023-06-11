@@ -21,6 +21,7 @@
     "@types/jsonwebtoken": "^8.5.9",
     "@types/morgan": "^1.9.3",
     "@types/node": "^16.7.2",
+    "@types/swagger-ui-express": "^4.1.3",
     "@typescript-eslint/eslint-plugin": "^4.29.3",
     "@typescript-eslint/parser": "^4.29.3",
     "eslint": "^7.32.0",
@@ -41,7 +42,9 @@
     "jsonwebtoken": "^8.5.1",
     "module-alias": "^2.2.2",
     "mongoose": "^6.0.12",
-    "morgan": "^1.10.0"
+    "morgan": "^1.10.0",
+    "swagger-ui-express": "^4.6.3",
+    "ts-express-decorators": "^5.65.9"
   },
   "_moduleAliases": {
     "@/resources": "dist/resources",

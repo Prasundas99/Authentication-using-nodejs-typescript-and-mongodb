@@ -1,11 +1,13 @@
 import { Router, Request, Response, NextFunction } from 'express';
 import Controller from '@/utils/interfaces/controller.interface';
 import HttpException from '@/utils/exceptions/HttpException'; 
-import validationMiddleware from '@/middlewares/validationMiddleware'; 
+import validationMiddleware from '../../middlewares/validationMiddleware'; 
+import authenticatedMiddleware from '../../middlewares/authenticatedMiddleware'; 
 import validate from '@/resources/user/user.validation';
 import UserService from '@/resources/user/user.service';
-import authenticatedMiddleware from '@/middlewares/authenticatedMiddleware'; 
+import { Controller as swaggerController, Get } from 'ts-express-decorators';
 
+@swaggerController('/users')
 class UserController implements Controller {
     public path = '/users';
     public router = Router();
@@ -16,6 +18,7 @@ class UserController implements Controller {
     }
 
     private initialiseRoutes(): void {
+
         this.router.post(
             `${this.path}/register`,
             validationMiddleware(validate.register),
@@ -66,8 +69,9 @@ class UserController implements Controller {
         }
     };
 
+    @Get('/')
     private getUser = (
-        req: Request,
+        req: any,
         res: Response,
         next: NextFunction
     ): Response | void => {

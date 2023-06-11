@@ -6,6 +6,7 @@ import helmet from "helmet";
 import Controller from "@/utils/interfaces/controller.interface";
 import errorMiddleware from "./middlewares/errorMiddlewares"; 
 import connectToDatabase from "./utils/database";
+import swaggerUi from 'swagger-ui-express';
 
 
 class App {
@@ -20,6 +21,7 @@ class App {
         this.initializeMiddlewares();
         this.initializeControllers(controllers);
         this.initializeErrorHandling();
+        this.initializeSwagger();
     }
 
     private  initializeMiddlewares(): void {
@@ -29,6 +31,11 @@ class App {
         this.express.use(helmet());
         this.express.use(cors());
         this.express.use(morgan("dev"));
+    }
+
+    private initializeSwagger(): void {
+        // Set up Swagger UI
+        this.express.use('/api-docs', swaggerUi.serve, swaggerUi.setup());
     }
 
     private initializeControllers(controllers: Controller[]): void {

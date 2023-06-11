@@ -1,4 +1,3 @@
-import '@/custom.d.ts';
 import { Response, NextFunction } from 'express';
 import token from '@/utils/token';
 import UserModel  from '@/resources/user/user.model';
