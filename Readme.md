@@ -12,7 +12,7 @@ A Node application for authentication using typescript,express and mongoDB
 - express
 - mongoDB
 - jsonwebtoken
-- lodash
+
 
 
 ## :rocket: Installation
@@ -51,13 +51,6 @@ A Node application for authentication using typescript,express and mongoDB
     npm run lint-fix
     ```
 
-## :twisted_rightwards_arrows:: Routes
-
-1. http://localhost:3000/user/signup
-2. http://localhost:3000/user/login
-3. http://localhost:3000/user/    (with token in header i.e header :{token:""})
-4. http://localhost:3000/user/changepassword
-
 
 ## 🤝 Contributing [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg?style=flat-square)](http://makeapullrequest.com)
 The process of submitting a pull request is fairly straightforward and generally follows the same pattern each time:
@@ -74,7 +67,7 @@ The process of submitting a pull request is fairly straightforward and generally
     # Navigate to the newly cloned directory
     cd <repo-name>
     # Assign the original repo to a remote called "upstream"
-    git remote add upstream https://github.com/AurangzaibRamzan/authentication-using-node-typescript-mongodb.git
+    git remote add upstream https://github.com/{rasundas99/authentication-using-node-typescript-mongodb.git
     ```
 
 3. If you cloned a while ago, get the latest changes from upstream:
