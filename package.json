@@ -41,7 +41,7 @@
     "joi": "^17.4.2",
     "jsonwebtoken": "^9.0.0",
     "module-alias": "^2.2.2",
-    "mongoose": "^6.0.12",
+    "mongoose": "^6.11.3",
     "morgan": "^1.10.0",
     "swagger-ui-express": "^4.6.3",
     "ts-express-decorators": "^5.67.2"
